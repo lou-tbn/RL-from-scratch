@@ -1,6 +1,6 @@
 # Reinforcement Learning Notebooks
 
-Jupyter notebooks implementing classic tabular reinforcement learning algorithms.
+Jupyter notebooks implementing classic reinforcement learning algorithms, from bandits and tabular methods to value-function approximation.
 
 ## Notebooks
 
@@ -10,8 +10,9 @@ Jupyter notebooks implementing classic tabular reinforcement learning algorithms
 | [`MDP.ipynb`](MDP.ipynb) | MDPs & dynamic programming | Value iteration and policy iteration on a GridWorld (known model) |
 | [`Monte_Carlo.ipynb`](Monte_Carlo.ipynb) | Monte Carlo methods | Policy evaluation and control on Blackjack (no model, full episodes) |
 | [`Temporal-difference.ipynb`](Temporal-difference.ipynb) | Temporal-difference control | SARSA and Q-learning on FrozenLake (no model, online bootstrapping) |
+| [`Function_Approximation.ipynb`](Function_Approximation.ipynb) | Value-function approximation | Semi-gradient SARSA / Q-learning and DQN on Mountain Car (continuous states) |
 
-Suggested order: **MAB → MDP → Monte Carlo → Temporal-difference**.
+Suggested order: **MAB → MDP → Monte Carlo → Temporal-difference → Function Approximation**.
 
 ## Requirements
 
@@ -22,7 +23,13 @@ Suggested order: **MAB → MDP → Monte Carlo → Temporal-difference**.
 pip install numpy matplotlib gymnasium
 ```
 
-Optional (for interactive displays in the TD notebook):
+For the neural DQN section in `Function_Approximation.ipynb`:
+
+```bash
+pip install torch
+```
+
+Optional (for interactive displays):
 
 ```bash
 pip install ipython
@@ -44,6 +51,7 @@ Then open any `.ipynb` file and run the cells top to bottom.
 - **MDP** — Bellman backups, value / policy iteration, policy extraction, GridWorld visualization
 - **Monte Carlo** — first-visit / every-visit evaluation, exploring starts, on-policy and off-policy control
 - **Temporal-difference** — $\varepsilon$-greedy behavior, SARSA (on-policy), Q-learning (off-policy)
+- **Function Approximation** — tile coding, semi-gradient TD(0), semi-gradient SARSA, batched linear Q-learning, neural DQN
 
 ## References
 
